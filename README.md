@@ -1,4 +1,4 @@
-## Yi-wen Hsiao's CV
+## Yi-Wen Hsiao's CV
 
 This CV was built with the [**pagedown package**](https://pagedown.rbind.io).
 
