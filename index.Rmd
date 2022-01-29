@@ -1,0 +1,191 @@
+---
+title: "Yi-Wen Hsiao's resume"
+author: Yi-Wen Hsiao
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+    css: ["css/styles.css"]
+
+---
+<!--- start of code for font awesome--->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="css/academicons/css/academicons.min.css">
+<!--- end of code for font awesome--->
+
+```{r, include=FALSE}
+# code from https://github.com/nstrayer/cv
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+library(tidyverse)
+library(glue)
+
+# Set this to true to have links turned into footnotes at the end of the document
+PDF_EXPORT <- FALSE
+
+# Holds all the links that were inserted for placement at the end
+links <- c()
+
+source('parsing_functions.R')
+
+
+# Load csv with position info
+position_data <- read_csv('list.csv')
+
+```
+
+
+Aside
+================================================================================
+
+### ***SUMMARY***
+
+<i class="fas fa-graduation-cap"></i> Doctoral Candidate in Biostatistics at National Taiwan University (NTU)
+
+```{r echo=FALSE, out.width="8%"}
+knitr::include_graphics("img/DNA.png")
+```
+Genomics enthusiast
+
+```{r echo=FALSE, out.width="7%"}
+knitr::include_graphics("img/workflow.png")
+```
+NGS data analysis pipline constructor
+
+<i class="fa fa-bar-chart"></i> Statistics/Data lover
+
+<br>
+
+### ***SKILLS***
+
+<i class="fab fa-r-project"></i> `R`
+
+<i class="fab fa-python"></i> `Python`
+
+<i class="fab fa-linux"></i> `Linux`
+
+<br>
+
+### ***LANGUAGE***
+
+**Mandarin:** Native
+
+**English:** IELTS (overall 7; 2019.09)
+
+<br>
+
+### ***CONTACT INFO***
+
+<i class="fa fa-envelope"></i> [d08849010](d08849010@ntu.edu.tw)
+
+<i class="fa fa-twitter"></i> [YWHSIAO9419](https://twitter.com/YWHSIAO9419)
+
+<i class="fa fa-github"></i> [ywhsiao](https://github.com/ywhsiao)
+
+<i class="fa fa-home"></i> [ywhsiao.com](https://ywhsiao.com)
+
+<i class="ai ai-google-scholar"></i> [Google Scholar](https://scholar.google.com/citations?user=5AROU-8AAAAJ&hl=en)
+
+<i class="fab fa-researchgate"></i> [ResearchGate](https://www.researchgate.net/profile/Yi_Wen_Hsiao)
+
+For further information, please contact me via email.
+
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Last updated on `r Sys.Date()`. 
+
+
+Main
+================================================================================
+
+Yi-Wen Hsiao {#title}
+--------------------------------------------------------------------------------
+
+PhD candidate in Biostatistics at National Taiwan University. 
+
+I have been trained in bioinformatics, engineering and biotechnology, with both experimental and computational skills developed from extensive research experience.
+
+My current research interests involve highly dimensional data analysis, text-mining technology, artificial intelligence/machine learning and their application in the biological field.
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'education')
+```
+
+
+Work Experience {data-icon=briefcase}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'work_experience')
+```
+
+
+Research Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'research_experience')
+```
+
+<br>
+
+<br>
+
+Academic Articles{data-icon=book-open} 
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'academic_articles')
+```
+
+
+Oral Presentations {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'oral_presentation')
+```
+
+
+Seminar Presentations {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'seminar_presentation')
+```
+
+
+Teaching Assistant Positions {data-icon=chalkboard-teacher} 
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'teaching_assistant_position')
+```
+
+
+Workshops taught {data-icon=calendar-check} 
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'workshops_taught')
+```
+
+
+Workshops attended {data-icon=calendar-check} 
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'workshops_attended')
+```
